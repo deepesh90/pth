@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>P3 | Admin</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/lc_switch.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
+<body class="fixed-sidebar">
+
+<div class="login-main ng-scope" ng-init="init();">
+    <div class="col-md-6 col-sm-6 hidden-xs image-block ">
+            <div class="bgimage-caption text-center">
+                  <h2 class="font-bold ng-binding"></h2>
+                  <h3>If you do not have a login,</h3>
+                  <p>please contact your system administrator who will help you create an account.</p>
+                  <hr>
+                  <p class="text-muted text-center">
+                    <button class="btn btn-default btn-sm">Contact Mr. Administrator to get started!</button>
+                  </p>
+              </div>
+          </div>
+
+    <div class="col-md-6 col-sm-6">
+      <div class="form-block">
+        <div class="form-block-inner">
+          <form class="m-t ng-valid-email ng-dirty ng-valid-parse ng-valid ng-valid-required" role="form" style="">
+            <div class="login-block">
+              <a href="index.html"><img height="60"  src="img/logo.svg" alt="P3" title="P3"></a>
+              <h2 class="margin-bottom-30">Login To Your Account</h2>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon rounded-left"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="email" class="form-control " placeholder="Username" >
+                </div>
+
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon rounded-left"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control " placeholder="Password" >
+              </div>
+              </div>
+				<a href="dashboard.php" class="btn btn-primary btn-block btn-lg m-b">Login</a>
+              <a href="#">
+                <small>Forgot password?</small>
+              </a>
+
+              <p class="text-muted text-center">
+                <small>Do not have an account?</small>
+              </p>
+              <div class="copyright-block text-center">
+                        	<p>© Copyright 2016-2017 <a href="#">CustVantage</a>. All Rights Reserved.</p>
+                        </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/codemirror.js"></script>
+    <script src="js/codescript.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+
+        var textarea = document.getElementById("code1");
+
+        // Wait until animation finished render container
+        setTimeout(function(){
+
+            CodeMirror.fromTextArea(textarea, {
+                lineNumbers: true,
+                matchBrackets: true,
+                styleActiveLine: true
+            });
+        }, 500);
+
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
